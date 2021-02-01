@@ -15,4 +15,18 @@ class IndexController extends AbstractController
     {
         return new Response('<html><body>huipizdadzigurda</body></html>');
     }
+
+    /**
+     * @Route("/template", name="template")
+     * @throws \Exception
+     */
+    public function templateAction(Request $request): Response
+    {
+        $number = random_int(0, 100);
+
+        return $this->render('test/test.html.twig', [
+            'number' => $number,
+            'host'   => $request->getClientIp()
+        ]);
+    }
 }
