@@ -1,11 +1,17 @@
 <!DOCTYPE html>
-<html>
 <head>
     <meta charset="UTF-8">
-    <title>{{ number }}</title>
+    <title>hui</title>
 </head>
 <body>
-{{ host }}
+
 <a href="{{ path('index') }}">Главная</a>
+<a href="{{ path('search') }}">Поиск</a>
+<a href="{{ path('random') }}">Совершенно рандомная статья</a>
+<a href="{{ path('name') }}">Новое задание</a>
+<a href="{{ path('taskSelect') }}">Кот или Пёс</a>
+<a href="{{ path('choice') }}">Прежде чем начать, пройди это</a>
+{{ form(form) }}
+<br><p>{{ task.task }}</p>
 </body>
 </html>

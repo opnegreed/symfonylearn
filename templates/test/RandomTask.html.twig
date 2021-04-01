@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>hui</title>
+</head>
+<body>
+
+<a href="{{ path('index') }}">Главная</a>
+{{ form(form) }}
+<br>
+{% if task is null %}
+    <p>Нихуя не нашли</p>
+{% else %}
+    <p>{{ task.task }}</p>
+{% endif %}
+</body>
+</html>
